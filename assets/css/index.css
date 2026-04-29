@@ -385,6 +385,8 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
+
+
 .section-title {
   padding-bottom: 60px;
   position: relative;
@@ -393,24 +395,52 @@ section,
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
   position: relative;
 }
 
-.section-title h2:after {
+
+
+
+.section-title h2::after {
   content: "";
-  position: absolute;
   display: block;
-  width: 50px;
+  width: 25%;
   height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  bottom: 0;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #25D366, #007bff);
+  border-radius: 2px;
+}
+.section-title i {
+  display: inline-block;
+  animation: bounce .5s infinite;
+  color: rgb(42, 141, 17);
+  text-shadow: 0 0 8px rgba(46, 214, 4, 0.3);
+
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
+.section-title i:hover {
+  transform: scale(0.2);;
+}
+
+
+
 .section-title p {
-  margin-bottom: 0;
+  text-align: left;
+  line-height: 1.8;
+  
+  margin-top: 10px;
+  padding: 20px;
+  background: #f8f9fa;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0,0.05);
+
 }
 
 /*--------------------------------------------------------------
@@ -741,6 +771,7 @@ section,
   z-index: 9994;
 }
 
+
 .portfolio-iframe {
   position: relative;
   width: 100%;
@@ -758,6 +789,7 @@ section,
 }
 
 
+
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #45505b;
@@ -766,7 +798,7 @@ section,
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #45505b;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
