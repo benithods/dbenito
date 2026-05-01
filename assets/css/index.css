@@ -619,7 +619,7 @@ display: flex;
   padding: 12px 15px;
   margin: auto 0 15px 0;
   border-radius: 12px;
-  background: #f5f5f5;
+  background: #ffffff;
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -632,7 +632,7 @@ display: flex;
 
 .info-item:hover {
   
-  background: #91caff;
+  background: #02a00a15;
   transform: translateY(-4px) scale(1.01);
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 
@@ -646,13 +646,13 @@ display: flex;
 
 .info-item a,
 .info-item span {
-  font-size: 15px;
+  font-size: 12px;
   color: #555;
   text-decoration: none;
 }
 
 .info-item a:hover {
-  color: #ffffff;
+  color: #02a00a;
   text-decoration: none;
 }
 
@@ -693,19 +693,25 @@ display: flex;
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
-.about .stats-item {
-  padding: 30px;
+.stats {
+  
+  padding: 0 0 20px 0;
+}
+
+.stats .stats-item {
+
+  padding: 0 0 30px 0;
   width: 100%;
 }
 
-.about .stats-item .icon-img {
+.stats .stats-item .icon-img {
   width: 40px;
   height: 40px;
   margin-right: 20px;
   float: left;
 }
 
-.about .stats-item .purecounter {
+.stats .stats-item .purecounter {
   color: var(--heading-color);
   font-size: 40px;
   line-height: 40px;
@@ -714,13 +720,13 @@ display: flex;
   margin-left: 60px;
 }
 
-.about .stats-item p {
+.stats .stats-item p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 15px 0 0 0;
   margin: 0 0 0 10px;
   font-family: var(--heading-font);
   font-size: 14px;
-}
+} 
 /*=================================================================
                                                           PORTAFOLIO
 ====================================================================*/
