@@ -609,7 +609,70 @@ section,
 .about .content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
+.info-item {
+display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  margin: auto 0 15px 0;
+  border-radius: 12px;
+  background: #f5f5f5;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.info-item:nth-child(1) { animation-delay: 0.2s; }
+.info-item:nth-child(2) { animation-delay: 0.4s; }
+.info-item:nth-child(3) { animation-delay: 0.6s; }
+
+.info-item:hover {
+  
+  background: #91caff;
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+}
+
+.info-item strong {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-item a,
+.info-item span {
+  font-size: 15px;
+  color: #555;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Animación de entrada */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 .about .content ul li {
   margin-bottom: 20px;
@@ -624,7 +687,7 @@ section,
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--accent-color);
+  color: #02a00a;
   line-height: 0;
 }
 /*--------------------------------------------------------------
@@ -635,12 +698,11 @@ section,
   width: 100%;
 }
 
-.about .stats-item i {
-  color: var(--accent-color);
-  display: block;
-  font-size: 40px;
+.about .stats-item .icon-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
   float: left;
-  line-height: 0;
 }
 
 .about .stats-item .purecounter {
@@ -660,7 +722,7 @@ section,
   font-size: 14px;
 }
 /*=================================================================
-
+                                                          PORTAFOLIO
 ====================================================================*/
 
 /*--------------------------------------------------------------
@@ -767,7 +829,6 @@ section,
   z-index: 9994;
 }
 
-
 .portfolio-iframe {
   position: relative;
   width: 100%;
@@ -783,7 +844,6 @@ section,
   height: 100%;
   border: 0;
 }
-
 
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
